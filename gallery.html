@@ -37,56 +37,43 @@
                 <h2>Project & Design Gallery</h2>
                 <p>Welcome to my gallery, where I showcase a selection of projects and designs I've contributed to, particularly during my time at "Caught in Web." These examples highlight my practical application of web design principles and infrastructure considerations.</p>
 
-                <div class="gallery-grid">
-                    <figure class="gallery-item">
-                        <a href="images/project_full_1.jpg" data-lightbox="gallery" data-title="E-commerce Platform Backend Optimization">
-                            <img src="images/project_thumb_1.jpg" alt="Screenshot of a refined e-commerce backend interface" class="gallery-thumbnail">
-                        </a>
-                        <figcaption>E-commerce Platform Backend Optimization</figcaption>
-                        <p>Optimized the backend infrastructure for a client's e-commerce site, reducing load times by 20%.</p>
-                    </figure>
-
-                    <figure class="gallery-item">
-                        <a href="images/project_full_2.jpg" data-lightbox="gallery" data-title="Secure API Gateway Implementation">
-                            <img src="images/project_thumb_2.jpg" alt="Diagram illustrating secure API gateway architecture" class="gallery-thumbnail">
-                        </a>
-                        <figcaption>Secure API Gateway Implementation</figcaption>
-                        <p>Designed and implemented a secure API gateway for microservices architecture, enhancing data protection.</p>
-                    </figure>
-
-                    <figure class="gallery-item">
-                        <a href="images/project_full_3.jpg" data-lightbox="gallery" data-title="Cloud Migration Strategy">
-                            <img src="images/project_thumb_3.jpg" alt="Infographic showing steps of cloud migration" class="gallery-thumbnail">
-                        </a>
-                        <figcaption>Cloud Migration Strategy</figcaption>
-                        <p>Assisted in developing a phased cloud migration strategy for legacy applications, ensuring minimal disruption.</p>
-                    </figure>
-
-                    <figure class="gallery-item">
-                        <a href="images/project_full_4.jpg" data-lightbox="gallery" data-title="Website Performance Audit">
-                            <img src="images/project_thumb_4.jpg" alt="Performance graph showing website speed improvements" class="gallery-thumbnail">
-                        </a>
-                        <figcaption>Website Performance Audit</figcaption>
-                        <p>Conducted a comprehensive audit of client websites, identifying bottlenecks and implementing performance improvements.</p>
-                    </figure>
-
-                    <figure class="gallery-item">
-                        <a href="images/project_full_5.jpg" data-lightbox="gallery" data-title="Automated Deployment Pipeline">
-                            <img src="images/project_thumb_5.jpg" alt="Flowchart of a CI/CD pipeline" class="gallery-thumbnail">
-                        </a>
-                        <figcaption>Automated Deployment Pipeline</figcaption>
-                        <p>Contributed to setting up an automated CI/CD pipeline for faster and more reliable software deployments.</p>
-                    </figure>
-
-                    <figure class="gallery-item">
-                        <a href="images/project_full_6.jpg" data-lightbox="gallery" data-title="Custom CMS Development Interface">
-                            <img src="images/project_thumb_6.jpg" alt="Screenshot of a custom Content Management System interface" class="gallery-thumbnail">
-                        </a>
-                        <figcaption>Custom CMS Development Interface</figcaption>
-                        <p>Worked on the infrastructure supporting a custom CMS, ensuring robust database and server performance.</p>
-                    </figure>
+                <div class="main-gallery">
+                    <div class="gallery-navigation">
+                        <button class="nav-btn prev-btn" id="prevBtn">&lt;</button>
+                        <div class="gallery-image-container">
+                            <img id="mainGalleryImage" src="https://via.placeholder.com/800x500/CDD293/333333?text=E-commerce+Backend" alt="E-commerce Platform Backend Optimization" class="main-gallery-image">
+                            <div class="image-counter">
+                                <span id="currentNumber">1</span> / <span id="totalNumber">6</span>
+                            </div>
+                        </div>
+                        <button class="nav-btn next-btn" id="nextBtn">&gt;</button>
+                    </div>
+                    <div class="gallery-details">
+                        <h3 id="galleryTitle">E-commerce Platform Backend Optimization</h3>
+                        <p id="galleryDescription">Optimized the backend infrastructure for a client's e-commerce site, reducing load times by 20%.</p>
+                    </div>
+                    <div class="gallery-thumbnails">
+                        <button class="thumbnail-btn active" data-index="0">
+                            <img src="https://via.placeholder.com/100x60/CDD293/333333?text=1" alt="Project 1">
+                        </button>
+                        <button class="thumbnail-btn" data-index="1">
+                            <img src="https://via.placeholder.com/100x60/A8B5A2/333333?text=2" alt="Project 2">
+                        </button>
+                        <button class="thumbnail-btn" data-index="2">
+                            <img src="https://via.placeholder.com/100x60/9FA692/333333?text=3" alt="Project 3">
+                        </button>
+                        <button class="thumbnail-btn" data-index="3">
+                            <img src="https://via.placeholder.com/100x60/BCC080/333333?text=4" alt="Project 4">
+                        </button>
+                        <button class="thumbnail-btn" data-index="4">
+                            <img src="https://via.placeholder.com/100x60/D4D9B5/333333?text=5" alt="Project 5">
+                        </button>
+                        <button class="thumbnail-btn" data-index="5">
+                            <img src="https://via.placeholder.com/100x60/E8EBBF/333333?text=6" alt="Project 6">
+                        </button>
+                    </div>
                 </div>
-                <p class="gallery-note">Click on any image to view it in more detail. (This functionality will be enabled with JavaScript.)</p>
+                <p class="gallery-note">Use the navigation buttons, thumbnail images, or arrow keys to browse through the project designs.</p>
             </div>
         </section>
     </main>
