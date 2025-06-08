@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yaz's Portfolio - Contact Me</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Yaz's Portfolio</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="skills.html">Skills</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="internship.html">Internship</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                    <li><a href="travel.html">Travel</a></li>
+                    <li><a href="culture.html">Culture</a></li>
+                    <li><a href="interests.html">Interests & Hobbies</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="contact-info">
+            <div class="container">
+                <h2>Get in Touch</h2>
+                <p>I'm always open to discussing new projects, collaborations, or career opportunities. Feel free to reach out through the form below or via my direct contact details.</p>
+
+                <div class="contact-details">
+                    <p><strong>Email:</strong> <a href="mailto:yaz.portfolio@email.com">yaz.portfolio@email.com</a></p>
+                    <p><strong>Phone:</strong> +1 (555) 123-4567</p>
+                    <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/yaz-infrastructure-engineer" target="_blank">linkedin.com/in/yaz-infrastructure-engineer</a></p>
+                    <p>I aim to respond to all inquiries within 24-48 hours.</p>
+                </div>
+
+                <div class="contact-form-section">
+                    <h3>Send Me a Message</h3>
+                    <form id="contactForm" action="#" method="POST">
+                        <div class="form-group">
+                            <label for="name">Your Name:</label>
+                            <input type="text" id="name" name="name" required aria-required="true" placeholder="Enter your full name">
+                            <div class="error-message" id="nameError"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Your Email:</label>
+                            <input type="email" id="email" name="email" required aria-required="true" placeholder="Enter your email address">
+                            <div class="error-message" id="emailError"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Subject:</label>
+                            <input type="text" id="subject" name="subject" required aria-required="true" placeholder="Subject of your message">
+                            <div class="error-message" id="subjectError"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message:</label>
+                            <textarea id="message" name="message" rows="6" required aria-required="true" placeholder="Your message here..."></textarea>
+                            <div class="error-message" id="messageError"></div>
+                        </div>
+
+                        <button type="submit">Send Message</button>
+                        <div id="formSuccess" class="success-message"></div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Yaz's Portfolio. All rights reserved.</p>
+            <p>Designed as part of a Web Design assignment for "Caught in Web."</p>
+            <div class="footer-links">
+                <a href="contact.html">Contact Me</a> | <a href="#">Privacy Policy</a>
+            </div>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
