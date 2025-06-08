@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frutiger Aero Background</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            overflow: hidden;
+            background: linear-gradient(135deg, #CDD293 0%, #a8c66c 25%, #7fb069 50%, #4d7c0f 75%, #365314 100%);
+            position: relative;
+        }
+
+        .background-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .flowing-shape {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(1px);
+            opacity: 0.6;
+        }
+
+        .shape-1 {
+            width: 800px;
+            height: 400px;
+            background: radial-gradient(ellipse at center, rgba(205, 210, 147, 0.8) 0%, rgba(205, 210, 147, 0.3) 50%, transparent 70%);
+            top: -200px;
+            left: -300px;
+            border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+            transform: rotate(-15deg);
+        }
+
+        .shape-2 {
+            width: 600px;
+            height: 300px;
+            background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.1) 60%, transparent 80%);
+            top: 20%;
+            right: -200px;
+            border-radius: 40% 60% 70% 30% / 40% 70% 30% 60%;
+            transform: rotate(25deg);
+        }
+
+        .shape-3 {
+            width: 700px;
+            height: 350px;
+            background: radial-gradient(ellipse at center, rgba(168, 198, 108, 0.6) 0%, rgba(168, 198, 108, 0.2) 50%, transparent 70%);
+            bottom: -150px;
+            left: 10%;
+            border-radius: 70% 30% 60% 40% / 30% 60% 40% 70%;
+            transform: rotate(45deg);
+        }
+
+        .shape-4 {
+            width: 500px;
+            height: 250px;
+            background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.1) 50%, transparent 70%);
+            top: 60%;
+            left: 20%;
+            border-radius: 50% 50% 80% 20% / 60% 40% 60% 40%;
+            transform: rotate(-30deg);
+        }
+
+        .flowing-line {
+            position: absolute;
+            height: 3px;
+            background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.8) 20%, rgba(255, 255, 255, 0.9) 50%, rgba(255, 255, 255, 0.8) 80%, transparent 100%);
+            border-radius: 50px;
+            filter: blur(0.5px);
+        }
+
+        .line-1 {
+            width: 60%;
+            top: 25%;
+            left: -10%;
+            transform: rotate(-8deg);
+        }
+
+        .line-2 {
+            width: 70%;
+            top: 45%;
+            right: -15%;
+            transform: rotate(12deg);
+        }
+
+        .line-3 {
+            width: 50%;
+            bottom: 30%;
+            left: 5%;
+            transform: rotate(-15deg);
+        }
+
+        .glossy-orb {
+            position: absolute;
+            border-radius: 50%;
+            background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.8) 0%, rgba(205, 210, 147, 0.6) 30%, rgba(127, 176, 105, 0.4) 70%, transparent 100%);
+            filter: blur(2px);
+        }
+
+        .orb-1 {
+            width: 120px;
+            height: 120px;
+            top: 15%;
+            left: 70%;
+            opacity: 0.7;
+        }
+
+        .orb-2 {
+            width: 80px;
+            height: 80px;
+            bottom: 25%;
+            right: 15%;
+            opacity: 0.5;
+        }
+
+        .orb-3 {
+            width: 60px;
+            height: 60px;
+            top: 70%;
+            left: 15%;
+            opacity: 0.6;
+        }
+
+        .content-area {
+            position: relative;
+            z-index: 10;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #2d3748;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .demo-content {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 2rem;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .demo-content h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #1a202c;
+            text-shadow: 0 2px 4px rgba(255, 255, 255, 0.3);
+        }
+
+        .demo-content p {
+            font-size: 1.2rem;
+            color: #2d3748;
+            opacity: 0.8;
+        }
+
+        /* Subtle highlight effects */
+        .highlight-1, .highlight-2, .highlight-3 {
+            position: absolute;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, transparent 70%);
+            filter: blur(3px);
+        }
+
+        .highlight-1 {
+            width: 200px;
+            height: 200px;
+            top: 10%;
+            right: 20%;
+        }
+
+        .highlight-2 {
+            width: 150px;
+            height: 150px;
+            bottom: 20%;
+            left: 25%;
+        }
+
+        .highlight-3 {
+            width: 100px;
+            height: 100px;
+            top: 50%;
+            right: 10%;
+        }
+    </style>
+</head>
+<body>
+    <div class="background-container">
+        <!-- Flowing organic shapes -->
+        <div class="flowing-shape shape-1"></div>
+        <div class="flowing-shape shape-2"></div>
+        <div class="flowing-shape shape-3"></div>
+        <div class="flowing-shape shape-4"></div>
+        
+        <!-- Flowing lines -->
+        <div class="flowing-line line-1"></div>
+        <div class="flowing-line line-2"></div>
+        <div class="flowing-line line-3"></div>
+        
+        <!-- Glossy orbs -->
+        <div class="glossy-orb orb-1"></div>
+        <div class="glossy-orb orb-2"></div>
+        <div class="glossy-orb orb-3"></div>
+        
+        <!-- Highlight effects -->
+        <div class="highlight-1"></div>
+        <div class="highlight-2"></div>
+        <div class="highlight-3"></div>
+    </div>
+    
+    <!-- Content area (demo) -->
+    <div class="content-area">
+        <div class="demo-content">
+            <h1>Frutiger Aero</h1>
+            <p>Clean, organic, and naturally inspired design</p>
+        </div>
+    </div>
+</body>
+</html>

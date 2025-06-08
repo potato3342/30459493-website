@@ -1,5 +1,32 @@
 // js/script.js
 
+// Dropdown Navigation Functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const dropdown = document.querySelector('.dropdown');
+    const dropdownToggle = document.querySelector('.dropdown-toggle');
+    
+    if (dropdown && dropdownToggle) {
+        dropdownToggle.addEventListener('click', function(e) {
+            e.preventDefault();
+            dropdown.classList.toggle('active');
+        });
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!dropdown.contains(e.target)) {
+                dropdown.classList.remove('active');
+            }
+        });
+
+        // Close dropdown when pressing Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                dropdown.classList.remove('active');
+            }
+        });
+    }
+});
+
 // Existing Lightbox/Gallery placeholder code (if any)
 /*
 document.addEventListener('DOMContentLoaded', function() {
